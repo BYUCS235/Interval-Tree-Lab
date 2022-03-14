@@ -20,6 +20,7 @@ An *Augmented Interval Tree* (AIT) is a specialized Binary Search Tree (BST) tha
    1. Your class should be stored in `AugmentedIntervalTree.h`
       1. You do not need to separate your code into separate `.h` and `.cpp` files, though you may choose to do so if you desire.
       2. If you do write an `AugmentedIntervalTree.cpp`, be sure to submit it in addition to the other files.
+        1. Note: it can be tricky to implement templated classes in a `.cpp`, so only attempt this if you know the issues and their solutions.
    2. This class must implement all the pure virtual functions found in `IntervalTree.h`
    3. This class is expected to not have any memory leaks 
 2. Write your own `tests.cpp`
@@ -75,6 +76,7 @@ test: build
 - Other things to remember:
   - Make sure `query` uses an **inoder** traversal so the output is sorted
   - No memory leaks
+  - To refer to `root` in your child class, use `this->root`. Do NOT override `root`, or this will cause the `to_string` method in the parent class to return the empty string.
 - Turn in `AugmentedIntervalTree.h`, `my_tests.cpp`, and `makefile`
 
 ## Points
